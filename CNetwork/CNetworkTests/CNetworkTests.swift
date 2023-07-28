@@ -11,7 +11,7 @@ import XCTest
 final class CNetworkTests: XCTestCase {
     
     func testExample() throws {
-        print(CustomClass.url)
+       
     }
 
 }

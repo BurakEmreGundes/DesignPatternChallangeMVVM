@@ -9,11 +9,20 @@ import UIKit
 import CNetwork
 
 class ViewController: UIViewController {
+    
+    let service : TopMoviesServiceProtocol = TopMovieService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(CustomClass.url)
+        service.fetchTopMovies { result in
+            switch result {
+            case .success(let response):
+                print(response.results)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+       
     }
 
 
