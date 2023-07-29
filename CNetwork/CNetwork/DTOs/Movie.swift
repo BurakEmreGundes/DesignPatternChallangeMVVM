@@ -18,9 +18,9 @@ public struct Movie : Decodable {
         case genres
     }
     
-    let artistName : String
+   public let artistName : String
     let releaseDate : Date
-    let name : String
+   public  let name : String
     let copyright : String?
     let image : URL
     let genres : [Genre]
